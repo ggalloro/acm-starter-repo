@@ -12,10 +12,10 @@ spec:
     - podSelector: {}
     - namespaceSelector:
         matchLabels:
-          bundle.gke.io/component-name: istio-ingress
+          bundle.gke.io/component-name: istio-ingress #To allow connection from istio ingress gateway in gke-system namespace in gke on-prem
   egress:
   - to:
     - namespaceSelector: {}
     - podSelector: {}
     - ipBlock:
-        cidr: 172.16.0.4/32
+        cidr: 172.16.0.4/32 #Replace with outbound target you want to allow communication to
