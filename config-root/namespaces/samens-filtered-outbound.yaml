@@ -1,0 +1,22 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  namespace: default
+  name: same-namespace-filtered-outbound
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector: {}
+    - namespaceSelector:
+        matchLabels:
+          bundle.gke.io/component-name: istio-ingress
+  egress:
+  - to:
+    - namespaceSelector: {}
+    - podSelector: {}
+    - ipBlock:
+        cidr: 172.16.0.4/32
