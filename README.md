@@ -11,7 +11,7 @@ This repo contains:
 
 - A role named 'deployer', applied to all namespaces, to be bound to an user or service account able to deploy applications only on assigned namespace
 
-- A 'user1' SA in the namespace1 namespace to be bound to the deployer role (not needed if using other kind of authentication/user accounts)
+- A 'user1' SA in the namespace1 namespace to be bound to the deployer role (not needed if working with Google Accounts on GKE or using any other Identity provider)
 
 - A 'user1' role binding in the namespace1 namespace to bound the SA and the deployer role
 
