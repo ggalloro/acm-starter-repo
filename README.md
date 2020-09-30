@@ -7,6 +7,8 @@ This repo contains:
 
 - A simple starting namespace structure, containing one namespace named 'namespace1' (to be renamed to what works for you)
 
+
+
 - A resource quota applied to all namespaces that limits to 5 pods, 2 cpu and 4Gi of memory
 
 - A role named 'deployer', applied to all namespaces, to be bound to an user o service account able to deploy applications only on assigned namespace
