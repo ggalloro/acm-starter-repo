@@ -3,7 +3,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: user1
 subjects:
-- kind: ServiceAccount
+- kind: ServiceAccount #Replace this with User (or Group)if working with Google Accounts on GKE or using any other Identity provider
   name: user1
 roleRef:
   apiGroup: rbac.authorization.k8s.io

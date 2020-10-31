@@ -11,9 +11,9 @@ This repo contains:
 
 - A resource quota applied to all namespaces that limits to 5 pods, 2 cpu and 4Gi of memory
 
-- A role named 'deployer', applied to all namespaces, to be bound to an user o service account able to deploy applications only on assigned namespace
+- A role named 'deployer', applied to all namespaces, to be bound to an user or service account able to deploy applications only on assigned namespace
 
-- A 'user1' SA in the namespace1 namespace to be bound to the deployer role
+- A 'user1' SA in the namespace1 namespace to be bound to the deployer role (not needed if working with Google Accounts on GKE or using any other Identity provider)
 
 - A 'user1' role binding in the namespace1 namespace to bound the SA and the deployer role
 
