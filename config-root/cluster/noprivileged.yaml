@@ -12,5 +12,5 @@ spec:
     - gke-system
     - gke-connect
     - config-management-system
-    - gatekeeper-systemi
+    - gatekeeper-system
     - istio-system
