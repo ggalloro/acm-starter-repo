@@ -11,9 +11,9 @@ This repo contains:
 
 - A 'user1' SA in the application1 namespace to be bound to the default admin ClusterRole (not needed if working with Google Accounts on GKE or using any other Identity provider)
 
-- A 'user1' role binding in the namespace1 namespace to bound the SA and the default admin ClusterRole
+- A 'user1' role binding in the namespace1 namespace to bind the SA (or user from identity provider) to the default admin ClusterRole
 
-- A network policy, applied to all the managed namespaces, to show how to allow inbound traffic only from same namespace (and istio ingress gateway running in gke-system namespace in case of Anthos GKE On-Prem in order to allow traffic) and outbound traffic only to specific address outside the cluster (to be replaced with what works for you)
+- A network policy, applied to all the managed namespaces, to show how to allow inbound traffic only from same namespace and outbound traffic only to specific address outside the cluster (to be replaced with what works for you)
 
 - An Anthos Config Management Policy Controller Constraint to block priviledged containers in non system namespaces. This would require tho have Policy controller component installed with ACM as described in the documentation: https://cloud.google.com/anthos-config-management/docs/how-to/installing-policy-controller#installing
 

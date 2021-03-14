@@ -1,7 +1,7 @@
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: same-namespace-filtered-outbound
+  name: ns-isolation
 spec:
   podSelector: {}
   policyTypes:
@@ -10,9 +10,6 @@ spec:
   ingress:
   - from:
     - podSelector: {}
-    - namespaceSelector:
-        matchLabels:
-          bundle.gke.io/component-name: istio-ingress #To allow connection from istio ingress gateway in gke-system namespace in gke on-prem
   egress:
   - to:
     - namespaceSelector: {}
