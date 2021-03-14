@@ -1,8 +1,8 @@
 kind: ClusterSelector
 apiVersion: configmanagement.gke.io/v1
 metadata:
-  name: cloud-selector
+  name: other-selector
 spec:
   selector:
     matchLabels:
-      location: cloud
+      location: other

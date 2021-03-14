@@ -1,8 +1,8 @@
 kind: ClusterSelector
 apiVersion: configmanagement.gke.io/v1
 metadata:
-  name: onprem-selector
+  name: cloud-selector
 spec:
   selector:
     matchLabels:
-      location: onprem
+      location: gcp
